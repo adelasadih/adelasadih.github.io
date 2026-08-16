@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Wohnkomplex Armaghan – Adel Asadi. Ein 15-geschossiger Wohnkomplex in Täbris, Iran.">
+
+<title>Wohnkomplex Armaghan | Adel Asadi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.project-header{
+    margin-top:110px;
+    padding-bottom:45px;
+    border-bottom:3px solid #111111;
+}
+
+.project-number{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.project-header h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.project-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+    font-size:15px;
+    color:#666666;
+}
+
+.project-meta strong{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.project-hero{
+    margin-top:55px;
+}
+
+.project-hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* =========================
+   PROJECT INFORMATION
+========================= */
+
+.project-content{
+    max-width:850px;
+    margin-top:65px;
+}
+
+.project-content h2{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.project-content p{
+    font-size:17px;
+    line-height:1.85;
+    color:#555555;
+    margin-bottom:25px;
+}
+
+.project-content p:last-child{
+    margin-bottom:0;
+}
+
+/* =========================
+   ROLE / CREDIT
+========================= */
+
+.project-role{
+    margin-top:60px;
+    padding:35px 0;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+
+.project-role p{
+    margin-bottom:10px;
+}
+
+.project-role p:last-child{
+    margin-bottom:0;
+}
+
+.project-role strong{
+    color:#111111;
+}
+
+/* =========================
+   PROJECT IMAGE GALLERY
+========================= */
+
+.project-gallery{
+    margin-top:70px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    align-items:flex-start;
+}
+
+.gallery-item{
+    width:calc((100% - 36px) / 4);
+    cursor:pointer;
+}
+
+.gallery-item img{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    display:block;
+    transition:opacity 0.25s ease;
+}
+
+.gallery-item img:hover{
+    opacity:0.75;
+}
+
+.image-caption{
+    font-size:11px;
+    color:#888888;
+    margin-top:8px;
+    line-height:1.4;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.94);
+    align-items:center;
+    justify-content:center;
+}
+
+.lightbox-image{
+    max-width:90%;
+    max-height:85%;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#ffffff;
+    font-size:38px;
+    font-weight:300;
+    cursor:pointer;
+    line-height:1;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ffffff;
+    font-size:42px;
+    font-weight:300;
+    cursor:pointer;
+    padding:20px;
+    user-select:none;
+}
+
+.lightbox-prev{
+    left:20px;
+}
+
+.lightbox-next{
+    right:20px;
+}
+
+.lightbox-counter{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* =========================
+   BACK TO PROJECTS
+========================= */
+
+.project-footer{
+    margin-top:80px;
+    padding:35px 0 70px;
+    border-top:3px solid #111111;
+}
+
+.project-footer a{
+    text-decoration:none;
+    color:#111111;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.project-footer a:hover{
+    opacity:0.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .project-header{
+        margin-top:70px;
+    }
+
+    .project-header h1{
+        font-size:36px;
+    }
+
+    .project-meta{
+        display:block;
+        line-height:2;
+    }
+
+    .project-content p{
+        font-size:16px;
+    }
+
+    .project-gallery{
+        gap:8px;
+    }
+
+    .gallery-item{
+        width:calc((100% - 16px) / 3);
+    }
+
+    .gallery-item img{
+        height:100px;
+    }
+
+    .image-caption{
+        font-size:10px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        font-size:30px;
+        padding:10px;
+    }
+
+    .lightbox-prev{
+        left:5px;
+    }
+
+    .lightbox-next{
+        right:5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="../index.html">Startseite</a>
+
+<a href="../about.html">Über mich</a>
+
+<a href="armaghan.html">Projekte</a>
+
+<a href="#">Wettbewerbe</a>
+
+<a href="../../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+Lebenslauf
+</a>
+
+<a href="../contact.html">Kontakt</a>
+
+<span class="language">
+
+<a href="armaghan.html"
+class="active-lang">
+DE
+</a>
+|
+<a href="../../projects/armaghan.html">
+EN
+</a>
+
+</span>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PROJECT HEADER
+========================= -->
+
+<section class="project-header">
+
+<div class="project-number">
+PROJEKT 01
+</div>
+
+<h1>
+Wohnkomplex Armaghan
+</h1>
+
+<div class="project-meta">
+
+<div>
+<strong>Standort:</strong>
+Täbris, Iran
+</div>
+
+<div>
+<strong>Fläche:</strong>
+29.288 m²
+</div>
+
+<div>
+<strong>Geschosse:</strong>
+15
+</div>
+
+<div>
+<strong>Jahr:</strong>
+2015
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HERO IMAGE
+========================= -->
+
+<section class="project-hero">
+
+<img
+src="../../images/armaghan-sketch.jpg"
+alt="Wohnkomplex Armaghan – Architekturskizze">
+
+</section>
+
+
+<!-- =========================
+     PROJECT DESCRIPTION
+========================= -->
+
+<section class="project-content">
+
+<h2>
+PROJEKTÜBERSICHT
+</h2>
+
+<p>
+Der Wohnkomplex Armaghan ist eine 15-geschossige Wohnanlage im Stadtteil Nasr in Täbris, Iran, einem der sich entwickelnden Stadtteile im Osten der Stadt.
+</p>
+
+<p>
+Der städtebauliche Kontext bot die Möglichkeit, eine hochwertige und funktionale Wohnanlage zu entwickeln. Das zentrale Entwurfskonzept basierte auf einem nachbarschaftsorientierten Ansatz mit dem Ziel, einen Teil der täglichen Bedürfnisse der Bewohner innerhalb der Anlage abzudecken.
+</p>
+
+<p>
+Aus diesem Grund wurden im Erdgeschoss Gewerbeeinheiten für die Grundversorgung integriert. Im südwestlichen Teil des Grundstücks wurde außerdem ein begrünter Bereich mit einem Kinderspielplatz vorgesehen. Dieser trägt zur Qualität des Wohnumfelds bei und fördert die soziale Interaktion der Bewohner.
+</p>
+
+<p>
+Um eine wirtschaftliche und strukturell effiziente Lösung zu erreichen, wurde die Anlage als zwei miteinander verbundene, spiegelbildlich angeordnete Baukörper konzipiert. Diese symmetrische Struktur vereinfachte die Tragwerksplanung, reduzierte die Baukosten und ermöglichte eine hohe Wiederholbarkeit konstruktiver Elemente.
+</p>
+
+<p>
+Das Gebäude umfasst zwei Untergeschosse für Parkplätze, ein Erdgeschoss mit Lobby, Haupteingang und Gewerbeflächen sowie zwölf Wohngeschosse. Auf jeder Wohnetage befinden sich sechzehn Wohneinheiten.
+</p>
+
+</section>
+
+
+<!-- =========================
+     ROLE / COMPANY
+========================= -->
+
+<section class="project-role">
+
+<p>
+<strong>Rolle:</strong>
+Mitglied des Entwurfsteams · Ausführungsplanung · Koordination der Bauausführung
+</p>
+
+<p>
+<strong>Beruflicher Kontext:</strong>
+Das Projekt entstand während meiner Tätigkeit bei Ista-Frame Tarahan-e-Tabriz in Täbris, Iran.
+</p>
+
+<p>
+<strong>Verantwortungsbereich:</strong>
+Ich war Teil des Entwurfsteams und verantwortlich für die Ausführungsplanung. Während der Bauphase arbeitete ich außerdem mit dem Bauleitungsteam zusammen, um die Umsetzung der architektonischen Details zu koordinieren und zu überwachen.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PROJECT DOCUMENTATION
+========================= -->
+
+<section class="project-gallery">
+
+
+<div class="gallery-item"
+onclick="openGallery(0)">
+
+<img
+src="../../images/armaghan-night-01.jpg"
+alt="Wohnkomplex Armaghan – Außenansicht bei Nacht">
+
+<p class="image-caption">
+Außenansicht
+</p>
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openGallery(1)">
+
+<img
+src="../../images/armaghan-night-02.jpg"
+alt="Wohnkomplex Armaghan – Hauptfassade bei Nacht">
+
+<p class="image-caption">
+Hauptfassade
+</p>
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openGallery(2)">
+
+<img
+src="../../images/armaghan-section.jpg"
+alt="Wohnkomplex Armaghan – Architektonischer Schnitt">
+
+<p class="image-caption">
+Architektonischer Schnitt
+</p>
+
+</div>
+
+
+<div class="gallery-item"
+onclick="openGallery(3)">
+
+<img
+src="../../images/armaghan-site-plan.jpg"
+alt="Wohnkomplex Armaghan – Lageplan">
+
+<p class="image-caption">
+Lageplan und Freiraumgestaltung
+</p>
+
+</div>
+
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox"
+id="lightbox">
+
+<span class="lightbox-close"
+onclick="closeGallery()">
+&times;
+</span>
+
+<span class="lightbox-prev"
+onclick="changeImage(-1)">
+&#10094;
+</span>
+
+<img
+class="lightbox-image"
+id="lightboxImage"
+src=""
+alt="Project image">
+
+<span class="lightbox-next"
+onclick="changeImage(1)">
+&#10095;
+</span>
+
+<div class="lightbox-counter"
+id="lightboxCounter">
+1 / 4
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="../index.html">
+← Zurück zu den Projekten
+</a>
+
+</div>
+
+</section>
+
+
+<script>
+
+const galleryImages = [
+
+    "../../images/armaghan-night-01.jpg",
+    "../../images/armaghan-night-02.jpg",
+    "../../images/armaghan-section.jpg",
+    "../../images/armaghan-site-plan.jpg"
+
+];
+
+let currentImage = 0;
+
+
+function openGallery(index){
+
+    currentImage = index;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    showImage();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeGallery(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+    if(currentImage < 0){
+
+        currentImage = galleryImages.length - 1;
+
+    }
+
+    if(currentImage >= galleryImages.length){
+
+        currentImage = 0;
+
+    }
+
+    showImage();
+
+}
+
+
+function showImage(){
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentImage];
+
+    document.getElementById("lightboxCounter").textContent =
+        (currentImage + 1) + " / " + galleryImages.length;
+
+}
+
+
+document.addEventListener("keydown", function(event){
+
+    if(document.getElementById("lightbox").style.display === "flex"){
+
+        if(event.key === "ArrowLeft"){
+
+            changeImage(-1);
+
+        }
+
+        if(event.key === "ArrowRight"){
+
+            changeImage(1);
+
+        }
+
+        if(event.key === "Escape"){
+
+            closeGallery();
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

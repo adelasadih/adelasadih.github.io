@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Adel Asadi – Ausgewählte Architekturwettbewerbe, darunter die Mahdis Bibliothek und Buchausstellung in Ahvaz, Iran.">
+
+<title>Wettbewerbe | Adel Asadi – Architekt</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header{
+    margin-top:110px;
+    padding-bottom:45px;
+    border-bottom:3px solid #111111;
+}
+
+.page-number{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.page-header h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.15;
+    margin-bottom:20px;
+}
+
+.page-header p{
+    max-width:760px;
+    font-size:17px;
+    line-height:1.8;
+    color:#666666;
+}
+
+/* =========================
+   COMPETITION GRID
+========================= */
+
+.competition-grid{
+    display:grid;
+    grid-template-columns:1fr;
+
+    margin-top:55px;
+
+    border:4px solid #b8b8b8;
+
+    border-radius:16px;
+    overflow:hidden;
+}
+
+/* =========================
+   COMPETITION CARD
+========================= */
+
+.competition-card{
+    height:480px;
+
+    text-decoration:none;
+    color:#111111;
+
+    display:block;
+
+    background:#ffffff;
+
+    position:relative;
+    overflow:hidden;
+}
+
+/* =========================
+   COMPETITION IMAGE
+========================= */
+
+.competition-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+.competition-card:hover img{
+    transform:scale(1.04);
+}
+
+/* =========================
+   COMPETITION OVERLAY
+========================= */
+
+.competition-overlay{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:60px 30px 30px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.86),
+        rgba(0,0,0,0)
+    );
+
+    color:#ffffff;
+}
+
+/* =========================
+   COMPETITION TYPE
+========================= */
+
+.competition-type{
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    color:#C8A25A;
+
+    font-weight:600;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   COMPETITION TITLE
+========================= */
+
+.competition-title{
+    font-size:22px;
+
+    font-weight:500;
+
+    line-height:1.35;
+
+    margin-bottom:10px;
+}
+
+/* =========================
+   COMPETITION LOCATION
+========================= */
+
+.competition-location{
+    font-size:13px;
+
+    color:#dddddd;
+
+    line-height:1.5;
+}
+
+/* =========================
+   COMPETITION INFORMATION
+========================= */
+
+.competition-info{
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:1fr;
+
+    gap:30px;
+
+    padding:30px 0;
+
+    border-top:1px solid #dddddd;
+
+    border-bottom:1px solid #dddddd;
+}
+
+.competition-info-item{
+    font-size:14px;
+
+    color:#666666;
+
+    line-height:1.7;
+}
+
+.competition-info-item strong{
+    display:block;
+
+    color:#111111;
+
+    font-weight:600;
+
+    margin-bottom:4px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.competition-footer{
+    margin-top:80px;
+
+    padding:35px 0 70px;
+
+    border-top:3px solid #111111;
+}
+
+.competition-footer a{
+    text-decoration:none;
+
+    color:#111111;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+.competition-footer a:hover{
+    opacity:0.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+
+        flex-wrap:wrap;
+
+        justify-content:flex-end;
+
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .page-header{
+        margin-top:70px;
+    }
+
+    .page-header h1{
+        font-size:38px;
+    }
+
+    .page-header p{
+        font-size:16px;
+    }
+
+    .competition-grid{
+        grid-template-columns:1fr;
+
+        border-radius:12px;
+    }
+
+    .competition-card{
+        height:390px;
+    }
+
+    .competition-info{
+        grid-template-columns:1fr;
+
+        gap:20px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="index.html">
+Startseite
+</a>
+
+<a href="about.html">
+Über mich
+</a>
+
+<a href="projects.html">
+Projekte
+</a>
+
+<a href="competitions.html">
+Wettbewerbe
+</a>
+
+<a href="../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+Lebenslauf
+</a>
+
+<a href="contact.html">
+Kontakt
+</a>
+
+<span class="language">
+
+<a href="competitions.html"
+class="active-lang">
+DE
+</a>
+
+|
+
+<a href="../competitions.html">
+EN
+</a>
+
+</span>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PAGE HEADER
+========================= -->
+
+<section class="page-header">
+
+<div class="page-number">
+AUSGEWÄHLTE WETTBEWERBE
+</div>
+
+<h1>
+Wettbewerbe
+</h1>
+
+<p>
+Eine Auswahl von Architekturwettbewerben, die im Rahmen von kollaborativen Entwurfsteams entwickelt wurden, mit Schwerpunkt auf architektonischen Konzepten, räumlicher Organisation, Modellbau und finaler Präsentation.
+</p>
+
+</section>
+
+
+<!-- =========================
+     COMPETITION GRID
+========================= -->
+
+<section class="competition-grid">
+
+
+<!-- =========================
+     COMPETITION 01
+========================= -->
+
+<a href="projects/mahdis.html"
+class="competition-card">
+
+<img
+src="../images/mahdis-sketch.jpg"
+alt="Mahdis Bibliothek und Buchausstellung – Architekturskizze">
+
+<div class="competition-overlay">
+
+<div class="competition-type">
+WETTBEWERB 01
+</div>
+
+<div class="competition-title">
+Mahdis Bibliothek und Buchausstellung
+</div>
+
+<div class="competition-location">
+Ahvaz, Iran · 2011
+</div>
+
+</div>
+
+</a>
+
+
+</section>
+
+
+<!-- =========================
+     COMPETITION INFORMATION
+========================= -->
+
+<section class="competition-info">
+
+
+<div class="competition-info-item">
+
+<strong>
+WETTBEWERB 01
+</strong>
+
+Mahdis Bibliothek und Buchausstellung<br>
+Ahvaz, Iran · 2011
+
+</div>
+
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<section class="competition-footer">
+
+<a href="index.html">
+← Zurück zur Startseite
+</a>
+
+</section>
+
+
+</div>
+
+</body>
+
+</html>

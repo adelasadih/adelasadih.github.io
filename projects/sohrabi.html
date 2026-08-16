@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Sohrabi Commercial Complex – Adel Asadi. A commercial complex in Tabriz, Iran.">
+
+<title>Sohrabi Commercial Complex | Adel Asadi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.project-header{
+    margin-top:110px;
+    padding-bottom:45px;
+    border-bottom:3px solid #111111;
+}
+
+.project-number{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.project-header h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.project-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+    font-size:15px;
+    color:#666666;
+}
+
+.project-meta strong{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.project-hero{
+    margin-top:55px;
+}
+
+.project-hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content{
+    max-width:850px;
+    margin-top:65px;
+}
+
+.project-content h2{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.project-content p{
+    font-size:17px;
+    line-height:1.85;
+    color:#555555;
+    margin-bottom:25px;
+}
+
+/* =========================
+   ROLE
+========================= */
+
+.project-role{
+    margin-top:60px;
+    padding:35px 0;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+
+.project-role p{
+    font-size:16px;
+    line-height:1.8;
+    color:#555555;
+    margin-bottom:10px;
+}
+
+.project-role p:last-child{
+    margin-bottom:0;
+}
+
+.project-role strong{
+    color:#111111;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.project-gallery{
+    margin-top:70px;
+
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
+    gap:14px;
+
+    padding-bottom:20px;
+}
+
+.gallery-item{
+    width:100%;
+}
+
+.gallery-item img{
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    display:block;
+
+    cursor:pointer;
+
+    transition:
+        opacity 0.25s ease,
+        transform 0.25s ease;
+}
+
+.gallery-item img:hover{
+    opacity:0.85;
+    transform:scale(1.02);
+}
+
+.image-caption{
+    display:none;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    display:none;
+
+    position:fixed;
+    z-index:9999;
+
+    left:0;
+    top:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.94);
+
+    align-items:center;
+    justify-content:center;
+}
+
+.lightbox-image{
+    max-width:90%;
+    max-height:85%;
+
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+
+    top:25px;
+    right:35px;
+
+    color:#ffffff;
+
+    font-size:38px;
+    font-weight:300;
+
+    cursor:pointer;
+
+    line-height:1;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:#ffffff;
+
+    font-size:42px;
+    font-weight:300;
+
+    cursor:pointer;
+
+    padding:20px;
+
+    user-select:none;
+}
+
+.lightbox-prev{
+    left:20px;
+}
+
+.lightbox-next{
+    right:20px;
+}
+
+.lightbox-counter{
+    position:absolute;
+
+    bottom:25px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:#ffffff;
+
+    font-size:13px;
+
+    letter-spacing:2px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.project-footer{
+    margin-top:80px;
+
+    padding:35px 0 70px;
+
+    border-top:3px solid #111111;
+}
+
+.project-footer a{
+    text-decoration:none;
+
+    color:#111111;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+}
+
+.project-footer a:hover{
+    opacity:0.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:900px){
+
+    .project-gallery{
+        grid-template-columns:repeat(3, 1fr);
+        gap:12px;
+    }
+
+}
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+
+        justify-content:flex-end;
+
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .project-header{
+        margin-top:70px;
+    }
+
+    .project-header h1{
+        font-size:36px;
+    }
+
+    .project-meta{
+        display:block;
+        line-height:2;
+    }
+
+    .project-content p{
+        font-size:16px;
+    }
+
+    .project-gallery{
+        grid-template-columns:repeat(2, 1fr);
+        gap:10px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        font-size:30px;
+        padding:10px;
+    }
+
+    .lightbox-prev{
+        left:5px;
+    }
+
+    .lightbox-next{
+        right:5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+<header>
+
+<nav>
+
+<a href="../index.html">
+Home
+</a>
+
+<a href="../about.html">
+About
+</a>
+
+<a href="sohrabi.html">
+Projects
+</a>
+
+<a href="#">
+Competitions
+</a>
+
+<a href="../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+CV
+</a>
+
+<a href="../contact.html">
+Contact
+</a>
+
+<span class="language">
+
+<a href="../de/projects/sohrabi.html">
+DE
+</a>
+
+|
+
+<a href="sohrabi.html"
+class="active-lang">
+EN
+</a>
+
+</span>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PROJECT HEADER
+========================= -->
+
+<section class="project-header">
+
+<div class="project-number">
+PROJECT 02
+</div>
+
+<h1>
+Sohrabi Commercial Complex
+</h1>
+
+<div class="project-meta">
+
+<div>
+<strong>Location:</strong>
+Tabriz, Iran
+</div>
+
+<div>
+<strong>Area:</strong>
+7,080 m²
+</div>
+
+<div>
+<strong>Floors:</strong>
+5
+</div>
+
+<div>
+<strong>Year:</strong>
+2022
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HERO IMAGE
+========================= -->
+
+<section class="project-hero">
+
+<img
+src="../images/sohrabi-sketch.jpg"
+alt="Sohrabi Commercial Complex – architectural sketch">
+
+</section>
+
+
+<!-- =========================
+     PROJECT CONTENT
+========================= -->
+
+<section class="project-content">
+
+<h2>
+PROJECT OVERVIEW
+</h2>
+
+<p>
+The Sohrabi Commercial Complex is located on Nezam-Pezeshki Street in the western part of Tabriz, Iran.
+</p>
+
+<p>
+The project comprises five levels. The second basement level is dedicated to parking, while the first basement, ground floor, first floor and second floor are planned for commercial uses.
+</p>
+
+<p>
+Due to the generous floor-to-floor heights, each level also includes an additional mezzanine covering approximately 50% of the floor area. This arrangement was developed to respond to the different functional requirements of the commercial units.
+</p>
+
+<p>
+One of the client's main requirements was to create generous commercial units with high ceilings. This created logistical challenges, particularly for the transportation of goods. To address this issue, a large vehicle lift was designed on the western side of the project, accessed from a secondary street, providing convenient access to the upper commercial levels.
+</p>
+
+<p>
+The main entrance and foyer are located on the eastern side at street level and are equipped with three elevators for visitors and customers. Since the parking levels are located two floors below ground level, a separate access ramp was planned from the eastern side.
+</p>
+
+<p>
+One of the main challenges during the design process was the selection of appropriate façade materials. The client initially preferred contemporary materials such as composite panels and glass, or combinations of glass and natural stone. During the first design phase, several alternatives using composite materials, glass, stone and metal panels were developed.
+</p>
+
+<p>
+Considering the project's location within one of the historic districts of Tabriz and its proximity to traditional brick-production areas, the design approach shifted towards the use of local and sustainable materials such as brick and natural stone.
+</p>
+
+<p>
+This context-sensitive and environmentally conscious approach was presented to the client and was ultimately accepted.
+</p>
+
+</section>
+
+
+<!-- =========================
+     ROLE
+========================= -->
+
+<section class="project-role">
+
+<p>
+<strong>Role:</strong>
+Design Team Member · Execution Planning · 3D Modelling · Architectural Rendering
+</p>
+
+<p>
+<strong>Professional Context:</strong>
+Developed during my employment at Ista-Frame Tarahan-e-Tabriz, Tabriz, Iran.
+</p>
+
+<p>
+<strong>Responsibilities:</strong>
+I was part of the design and execution planning team. I was also responsible for 3D modelling and architectural rendering using 3ds Max and V-Ray.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PROJECT GALLERY
+========================= -->
+
+<section class="project-gallery">
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-01.jpg"
+alt="Sohrabi Commercial Complex – exterior view"
+onclick="openGallery(0)">
+
+<p class="image-caption">
+Sohrabi Commercial Complex – Exterior View
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-02.jpg"
+alt="Sohrabi Commercial Complex – perspective view"
+onclick="openGallery(1)">
+
+<p class="image-caption">
+Sohrabi Commercial Complex – Perspective View
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-03.jpg"
+alt="Sohrabi Commercial Complex – exterior view"
+onclick="openGallery(2)">
+
+<p class="image-caption">
+Sohrabi Commercial Complex – Exterior View
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-04.jpg"
+alt="Sohrabi Commercial Complex – construction stage"
+onclick="openGallery(3)">
+
+<p class="image-caption">
+Sohrabi Commercial Complex – Construction Stage
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-05.jpg"
+alt="Sohrabi Commercial Complex – construction stage"
+onclick="openGallery(4)">
+
+<p class="image-caption">
+Sohrabi Commercial Complex – Construction Stage
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/sohrabi-06.jpg"
+alt="Sohrabi Commercial Complex – architectural section"
+onclick="openGallery(5)">
+
+<p class="image-caption">
+Architectural Section
+</p>
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox"
+id="lightbox">
+
+<span class="lightbox-close"
+onclick="closeGallery()">
+
+&times;
+
+</span>
+
+
+<span class="lightbox-prev"
+onclick="changeImage(-1)">
+
+&#10094;
+
+</span>
+
+
+<img
+class="lightbox-image"
+id="lightboxImage"
+src=""
+alt="Project image">
+
+
+<span class="lightbox-next"
+onclick="changeImage(1)">
+
+&#10095;
+
+</span>
+
+
+<div class="lightbox-counter"
+id="lightboxCounter">
+
+1 / 6
+
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="../index.html">
+← Back to Projects
+</a>
+
+</div>
+
+</section>
+
+
+<script>
+
+const galleryImages = [
+
+    "../images/sohrabi-01.jpg",
+    "../images/sohrabi-02.jpg",
+    "../images/sohrabi-03.jpg",
+    "../images/sohrabi-04.jpg",
+    "../images/sohrabi-05.jpg",
+    "../images/sohrabi-06.jpg"
+
+];
+
+let currentImage = 0;
+
+
+function openGallery(index){
+
+    currentImage = index;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    showImage();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeGallery(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+
+    if(currentImage < 0){
+
+        currentImage = galleryImages.length - 1;
+
+    }
+
+
+    if(currentImage >= galleryImages.length){
+
+        currentImage = 0;
+
+    }
+
+
+    showImage();
+
+}
+
+
+function showImage(){
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentImage];
+
+    document.getElementById("lightboxCounter").textContent =
+        (currentImage + 1) + " / " + galleryImages.length;
+
+}
+
+
+document.addEventListener("keydown", function(event){
+
+    if(document.getElementById("lightbox").style.display === "flex"){
+
+        if(event.key === "ArrowLeft"){
+
+            changeImage(-1);
+
+        }
+
+
+        if(event.key === "ArrowRight"){
+
+            changeImage(1);
+
+        }
+
+
+        if(event.key === "Escape"){
+
+            closeGallery();
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Atay Residential Complex – Adel Asadi. A 13-storey residential complex in Tabriz, Iran.">
+
+<title>Atay Residential Complex | Adel Asadi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   PROJECT HEADER
+========================= */
+
+.project-header{
+    margin-top:110px;
+    padding-bottom:45px;
+    border-bottom:3px solid #111111;
+}
+
+.project-number{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.project-header h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.project-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+    font-size:15px;
+    color:#666666;
+}
+
+.project-meta strong{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   HERO IMAGE
+========================= */
+
+.project-hero{
+    margin-top:55px;
+}
+
+.project-hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* =========================
+   PROJECT CONTENT
+========================= */
+
+.project-content{
+    max-width:850px;
+    margin-top:65px;
+}
+
+.project-content h2{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.project-content p{
+    font-size:17px;
+    line-height:1.85;
+    color:#555555;
+    margin-bottom:25px;
+}
+
+/* =========================
+   ROLE
+========================= */
+
+.project-role{
+    margin-top:60px;
+    padding:35px 0;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+
+.project-role p{
+    font-size:16px;
+    line-height:1.8;
+    color:#555555;
+    margin-bottom:10px;
+}
+
+.project-role p:last-child{
+    margin-bottom:0;
+}
+
+.project-role strong{
+    color:#111111;
+}
+
+/* =========================
+   PROJECT GALLERY
+========================= */
+
+.project-gallery{
+    margin-top:70px;
+    display:flex;
+    gap:10px;
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+    padding-bottom:10px;
+    scrollbar-width:thin;
+}
+
+.gallery-item{
+    flex:0 0 auto;
+    width:120px;
+}
+
+.gallery-item img{
+    width:120px;
+    height:85px;
+    object-fit:cover;
+    display:block;
+    cursor:pointer;
+    transition:opacity 0.25s ease;
+}
+
+.gallery-item img:hover{
+    opacity:0.75;
+}
+
+.image-caption{
+    display:none;
+}
+
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.94);
+    align-items:center;
+    justify-content:center;
+}
+
+.lightbox-image{
+    max-width:90%;
+    max-height:85%;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#ffffff;
+    font-size:38px;
+    font-weight:300;
+    cursor:pointer;
+    line-height:1;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ffffff;
+    font-size:42px;
+    font-weight:300;
+    cursor:pointer;
+    padding:20px;
+    user-select:none;
+}
+
+.lightbox-prev{
+    left:20px;
+}
+
+.lightbox-next{
+    right:20px;
+}
+
+.lightbox-counter{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.project-footer{
+    margin-top:80px;
+    padding:35px 0 70px;
+    border-top:3px solid #111111;
+}
+
+.project-footer a{
+    text-decoration:none;
+    color:#111111;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.project-footer a:hover{
+    opacity:0.6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .project-header{
+        margin-top:70px;
+    }
+
+    .project-header h1{
+        font-size:36px;
+    }
+
+    .project-meta{
+        display:block;
+        line-height:2;
+    }
+
+    .project-content p{
+        font-size:16px;
+    }
+
+    .project-gallery{
+        gap:8px;
+    }
+
+    .gallery-item{
+        width:95px;
+    }
+
+    .gallery-item img{
+        width:95px;
+        height:70px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        font-size:30px;
+        padding:10px;
+    }
+
+    .lightbox-prev{
+        left:5px;
+    }
+
+    .lightbox-next{
+        right:5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="../index.html">Home</a>
+
+<a href="../about.html">About</a>
+
+<a href="armaghan.html">Projects</a>
+
+<a href="#">Competitions</a>
+
+<a href="../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+CV
+</a>
+
+<a href="../contact.html">Contact</a>
+
+<span class="language">
+
+<a href="../de/projects/atay.html">
+DE
+</a>
+|
+<a href="atay.html"
+class="active-lang">
+EN
+</a>
+
+</span>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     PROJECT HEADER
+========================= -->
+
+<section class="project-header">
+
+<div class="project-number">
+PROJECT 03
+</div>
+
+<h1>
+Atay Residential Complex
+</h1>
+
+<div class="project-meta">
+
+<div>
+<strong>Location:</strong>
+Tabriz, Iran
+</div>
+
+<div>
+<strong>Area:</strong>
+8,645 m²
+</div>
+
+<div>
+<strong>Floors:</strong>
+13
+</div>
+
+<div>
+<strong>Year:</strong>
+2018
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     HERO IMAGE
+========================= -->
+
+<section class="project-hero">
+
+<img
+src="../images/atay-sketch.jpg"
+alt="Atay Residential Complex – architectural sketch">
+
+</section>
+
+
+<!-- =========================
+     PROJECT OVERVIEW
+========================= -->
+
+<section class="project-content">
+
+<h2>
+PROJECT OVERVIEW
+</h2>
+
+<p>
+Atay Residential Complex is a 13-storey residential development located in the Nasr district in eastern Tabriz, Iran.
+</p>
+
+<p>
+The first basement level is used for parking, while the ground floor contains the lobby and additional parking spaces. The first three upper floors contain two residential units per floor, while the upper floors were designed as spacious single-unit apartments, with one apartment occupying each floor.
+</p>
+
+<p>
+One of the main challenges of the project was the unusual triangular shape of the site, combined with differences in elevation along its different sides. Despite these constraints, the design aimed to provide fourteen residential units across eleven residential floors according to the client's requirements.
+</p>
+
+<p>
+The upper residential units, with areas of up to 666 m², benefit from views towards landscaped areas. Generous terraces with different sizes and orientations were therefore incorporated along various sides of the façades.
+</p>
+
+<p>
+In the floor plan organization, particular attention was given to the clear separation of private areas, including bedrooms, bathrooms and WCs, from semi-public zones such as the living room and kitchen. The reception area, with direct access to the main terrace, was defined as a public space.
+</p>
+
+<p>
+Another challenge was the influence of the building form on the structural system, particularly due to the central placement of the staircase and elevator core within the triangular floor plan.
+</p>
+
+<p>
+The façade was designed entirely in a classical architectural style. The distinction between the floors was mainly expressed through the choice of materials: the lower three floors were clad in natural stone, while the upper floors were finished with coloured cement and a waterproof epoxy coating.
+</p>
+
+<p>
+Developing a façade design with a classical rhythm, proportion and symmetry despite the different floor plan configurations was one of the key design challenges of the project.
+</p>
+
+</section>
+
+
+<!-- =========================
+     ROLE / PROFESSIONAL CONTEXT
+========================= -->
+
+<section class="project-role">
+
+<p>
+<strong>Role:</strong>
+Design Team Member · Execution Planning · 3D Modelling · Architectural Rendering · Construction Coordination
+</p>
+
+<p>
+<strong>Professional Context:</strong>
+Developed during my employment at Ista-Frame Tarahan-e-Tabriz, Tabriz, Iran.
+</p>
+
+<p>
+<strong>Responsibilities:</strong>
+I was part of the design team and responsible for the execution planning. I also worked on the 3D modelling and architectural rendering using 3ds Max and V-Ray. During the construction phase, I worked closely with the construction supervision team.
+</p>
+
+</section>
+
+
+<!-- =========================
+     PROJECT GALLERY
+========================= -->
+
+<section class="project-gallery">
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-01.jpg"
+alt="Atay Residential Complex – exterior view 01"
+onclick="openGallery(0)">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-02.jpg"
+alt="Atay Residential Complex – exterior view 02"
+onclick="openGallery(1)">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-03.jpg"
+alt="Atay Residential Complex – exterior view 03"
+onclick="openGallery(2)">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-floor%20plan-01.jpg"
+alt="Atay Residential Complex – floor plan 01"
+onclick="openGallery(3)">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-floor%20plan-02.jpg"
+alt="Atay Residential Complex – floor plan 02"
+onclick="openGallery(4)">
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/atay-section.jpg"
+alt="Atay Residential Complex – architectural section"
+onclick="openGallery(5)">
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<!-- =========================
+     LIGHTBOX
+========================= -->
+
+<div class="lightbox"
+id="lightbox">
+
+<span class="lightbox-close"
+onclick="closeGallery()">
+&times;
+</span>
+
+<span class="lightbox-prev"
+onclick="changeImage(-1)">
+&#10094;
+</span>
+
+<img
+class="lightbox-image"
+id="lightboxImage"
+src=""
+alt="Project image">
+
+<span class="lightbox-next"
+onclick="changeImage(1)">
+&#10095;
+</span>
+
+<div class="lightbox-counter"
+id="lightboxCounter">
+1 / 6
+</div>
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="../index.html">
+← Back to Projects
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY JAVASCRIPT
+========================= -->
+
+<script>
+
+const galleryImages = [
+
+    "../images/atay-01.jpg",
+
+    "../images/atay-02.jpg",
+
+    "../images/atay-03.jpg",
+
+    "../images/atay-floor%20plan-01.jpg",
+
+    "../images/atay-floor%20plan-02.jpg",
+
+    "../images/atay-section.jpg"
+
+];
+
+let currentImage = 0;
+
+
+function openGallery(index){
+
+    currentImage = index;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    showImage();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeGallery(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+    if(currentImage < 0){
+
+        currentImage = galleryImages.length - 1;
+
+    }
+
+    if(currentImage >= galleryImages.length){
+
+        currentImage = 0;
+
+    }
+
+    showImage();
+
+}
+
+
+function showImage(){
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentImage];
+
+    document.getElementById("lightboxCounter").textContent =
+        (currentImage + 1) + " / " + galleryImages.length;
+
+}
+
+
+document.addEventListener("keydown", function(event){
+
+    if(document.getElementById("lightbox").style.display === "flex"){
+
+        if(event.key === "ArrowLeft"){
+
+            changeImage(-1);
+
+        }
+
+        if(event.key === "ArrowRight"){
+
+            changeImage(1);
+
+        }
+
+        if(event.key === "Escape"){
+
+            closeGallery();
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+
+</html>

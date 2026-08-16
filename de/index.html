@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Adel Asadi – Architekt mit 14 Jahren Berufserfahrung in Architektur, Städtebau, Ausführungsplanung und Wettbewerben.">
+
+<title>Adel Asadi | Architekt</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    margin-top:140px;
+}
+
+.hero h1{
+    font-size:72px;
+    font-weight:600;
+    color:#C8A25A;
+    margin-bottom:20px;
+    letter-spacing:2px;
+}
+
+.hero h2{
+    font-size:28px;
+    font-weight:300;
+    margin-bottom:0;
+}
+
+/* =========================
+   PROJECT GRID
+========================= */
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    margin-top:35px;
+
+    border:4px solid #b8b8b8;
+
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.project-card{
+    height:410px;
+
+    border-right:4px solid #b8b8b8;
+
+    text-decoration:none;
+    color:#111111;
+    display:block;
+    background:#ffffff;
+
+    position:relative;
+    overflow:hidden;
+}
+
+.project-card:last-child{
+    border-right:none;
+}
+
+/* =========================
+   PROJECT IMAGE
+========================= */
+
+.project-card img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+    display:block;
+
+    transition:transform 0.5s ease;
+}
+
+.project-card:hover img{
+    transform:scale(1.04);
+}
+
+/* =========================
+   PROJECT OVERLAY
+========================= */
+
+.project-overlay{
+    position:absolute;
+
+    left:0;
+    right:0;
+    bottom:0;
+
+    padding:35px 25px 25px;
+
+    background:linear-gradient(
+        to top,
+        rgba(0,0,0,0.82),
+        rgba(0,0,0,0)
+    );
+
+    color:#ffffff;
+}
+
+.project-type{
+    font-size:11px;
+    letter-spacing:3px;
+
+    color:#C8A25A;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+}
+
+.project-title{
+    font-size:18px;
+
+    font-weight:500;
+
+    line-height:1.35;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:1000px){
+
+    .project-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+
+    .project-card:nth-child(2){
+        border-right:none;
+    }
+
+    .project-card:nth-child(1),
+    .project-card:nth-child(2){
+        border-bottom:4px solid #b8b8b8;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+
+        justify-content:flex-end;
+
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .hero{
+        margin-top:80px;
+    }
+
+    .hero h1{
+        font-size:48px;
+        letter-spacing:1px;
+    }
+
+    .hero h2{
+        font-size:22px;
+    }
+
+    .project-grid{
+        grid-template-columns:1fr;
+
+        border-radius:12px;
+    }
+
+    .project-card{
+        height:360px;
+
+        border-right:none;
+
+        border-bottom:4px solid #b8b8b8;
+    }
+
+    .project-card:last-child{
+        border-bottom:none;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+<nav>
+
+<a href="index.html">
+Startseite
+</a>
+
+<a href="about.html">
+Über mich
+</a>
+
+<a href="projects.html">
+Projekte
+</a>
+
+<a href="competitions.html">
+Wettbewerbe
+</a>
+
+<a href="../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+Lebenslauf
+</a>
+
+<a href="contact.html">
+Kontakt
+</a>
+
+<span class="language">
+
+<a href="index.html"
+class="active-lang">
+DE
+</a>
+
+|
+
+<a href="../index.html">
+EN
+</a>
+
+</span>
+
+</nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+<h1>
+ADEL ASADI
+</h1>
+
+<h2>
+Architekt
+</h2>
+
+
+<!-- =========================
+     PROJECT GRID
+========================= -->
+
+<div class="project-grid">
+
+
+<!-- PROJEKT 01 -->
+
+<a href="projects/armaghan.html"
+class="project-card">
+
+<img
+src="../images/armaghan-sketch.jpg"
+alt="Wohnkomplex Armaghan – Architekturskizze">
+
+<div class="project-overlay">
+
+<div class="project-type">
+PROJEKT 01
+</div>
+
+<div class="project-title">
+Wohnkomplex Armaghan
+</div>
+
+</div>
+
+</a>
+
+
+<!-- PROJEKT 02 -->
+
+<a href="projects/sohrabi.html"
+class="project-card">
+
+<img
+src="../images/sohrabi-sketch.jpg"
+alt="Gewerbekomplex Sohrabi – Architekturskizze">
+
+<div class="project-overlay">
+
+<div class="project-type">
+PROJEKT 02
+</div>
+
+<div class="project-title">
+Gewerbekomplex Sohrabi
+</div>
+
+</div>
+
+</a>
+
+
+<!-- PROJEKT 03 -->
+
+<a href="projects/atay.html"
+class="project-card">
+
+<img
+src="../images/atay-sketch.jpg"
+alt="Wohnkomplex Atay – Architekturskizze">
+
+<div class="project-overlay">
+
+<div class="project-type">
+PROJEKT 03
+</div>
+
+<div class="project-title">
+Wohnkomplex Atay
+</div>
+
+</div>
+
+</a>
+
+
+<!-- WETTBEWERB -->
+
+<a href="projects/mahdis.html"
+class="project-card">
+
+<img
+src="../images/mahdis-sketch.jpg"
+alt="Mahdis Bibliothek und Buchausstellung – Architekturskizze">
+
+<div class="project-overlay">
+
+<div class="project-type">
+WETTBEWERB
+</div>
+
+<div class="project-title">
+Mahdis Bibliothek und Buchausstellung
+</div>
+
+</div>
+
+</a>
+
+
+</div>
+
+</section>
+
+
+</div>
+
+</body>
+
+</html>

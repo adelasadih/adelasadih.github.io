@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Mahdis Library and Book Exhibition – Adel Asadi. An architectural competition project in Ahvaz, Iran.">
+
+<title>Mahdis Library and Book Exhibition | Adel Asadi</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#ffffff;
+    color:#111111;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER */
+
+header{
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+    padding:40px 0;
+}
+
+nav a{
+    text-decoration:none;
+    color:#111111;
+    margin-left:30px;
+    font-size:14px;
+}
+
+nav a:hover{
+    opacity:0.6;
+}
+
+.language{
+    margin-left:15px;
+    display:inline-block;
+}
+
+.language a{
+    text-decoration:none;
+    color:#777777;
+    margin-left:0 !important;
+}
+
+.language a.active-lang{
+    color:#111111;
+    font-weight:600;
+}
+
+/* PROJECT HEADER */
+
+.project-header{
+    margin-top:110px;
+    padding-bottom:45px;
+    border-bottom:3px solid #111111;
+}
+
+.project-number{
+    font-size:14px;
+    letter-spacing:4px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:25px;
+}
+
+.project-header h1{
+    font-size:52px;
+    font-weight:600;
+    line-height:1.15;
+    margin-bottom:25px;
+}
+
+.project-meta{
+    display:flex;
+    flex-wrap:wrap;
+    gap:35px;
+    font-size:15px;
+    color:#666666;
+}
+
+.project-meta strong{
+    color:#111111;
+    font-weight:600;
+}
+
+/* HERO IMAGE */
+
+.project-hero{
+    margin-top:55px;
+}
+
+.project-hero img{
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+/* PROJECT CONTENT */
+
+.project-content{
+    max-width:850px;
+    margin-top:65px;
+}
+
+.project-content h2{
+    font-size:14px;
+    letter-spacing:3px;
+    color:#C8A25A;
+    font-weight:600;
+    margin-bottom:30px;
+}
+
+.project-content p{
+    font-size:17px;
+    line-height:1.85;
+    color:#555555;
+    margin-bottom:25px;
+}
+
+/* ROLE */
+
+.project-role{
+    margin-top:60px;
+    padding:35px 0;
+    border-top:1px solid #dddddd;
+    border-bottom:1px solid #dddddd;
+}
+
+.project-role p{
+    font-size:16px;
+    line-height:1.8;
+    color:#555555;
+    margin-bottom:10px;
+}
+
+.project-role p:last-child{
+    margin-bottom:0;
+}
+
+.project-role strong{
+    color:#111111;
+}
+
+/* THUMBNAIL GALLERY */
+
+.project-gallery{
+    margin-top:70px;
+    display:grid;
+    grid-template-columns:repeat(9, 1fr);
+    gap:8px;
+    align-items:start;
+}
+
+.gallery-item{
+    margin:0;
+    min-width:0;
+}
+
+.gallery-item img{
+    width:100%;
+    aspect-ratio:1 / 1;
+    object-fit:cover;
+    display:block;
+    cursor:pointer;
+    transition:opacity 0.25s ease;
+}
+
+.gallery-item img:hover{
+    opacity:0.75;
+}
+
+.image-caption{
+    display:none;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+    display:none;
+    position:fixed;
+    z-index:9999;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.94);
+    align-items:center;
+    justify-content:center;
+}
+
+.lightbox-image{
+    max-width:90%;
+    max-height:85%;
+    object-fit:contain;
+}
+
+.lightbox-close{
+    position:absolute;
+    top:25px;
+    right:35px;
+    color:#ffffff;
+    font-size:38px;
+    font-weight:300;
+    cursor:pointer;
+    line-height:1;
+}
+
+.lightbox-prev,
+.lightbox-next{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    color:#ffffff;
+    font-size:42px;
+    font-weight:300;
+    cursor:pointer;
+    padding:20px;
+    user-select:none;
+}
+
+.lightbox-prev{
+    left:20px;
+}
+
+.lightbox-next{
+    right:20px;
+}
+
+.lightbox-counter{
+    position:absolute;
+    bottom:25px;
+    left:50%;
+    transform:translateX(-50%);
+    color:#ffffff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+/* FOOTER */
+
+.project-footer{
+    margin-top:80px;
+    padding:35px 0 70px;
+    border-top:3px solid #111111;
+}
+
+.project-footer a{
+    text-decoration:none;
+    color:#111111;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+.project-footer a:hover{
+    opacity:0.6;
+}
+
+/* TABLET */
+
+@media(max-width:1000px){
+
+    .project-gallery{
+        grid-template-columns:repeat(6, 1fr);
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .container{
+        width:88%;
+    }
+
+    header{
+        padding:25px 0;
+    }
+
+    nav{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-end;
+        gap:12px;
+    }
+
+    nav a{
+        margin-left:15px;
+        font-size:13px;
+    }
+
+    .language{
+        margin-left:5px;
+    }
+
+    .project-header{
+        margin-top:70px;
+    }
+
+    .project-header h1{
+        font-size:36px;
+    }
+
+    .project-meta{
+        display:block;
+        line-height:2;
+    }
+
+    .project-content p{
+        font-size:16px;
+    }
+
+    .project-gallery{
+        grid-template-columns:repeat(3, 1fr);
+        gap:7px;
+        margin-top:55px;
+    }
+
+    .lightbox-prev,
+    .lightbox-next{
+        font-size:30px;
+        padding:10px;
+    }
+
+    .lightbox-prev{
+        left:5px;
+    }
+
+    .lightbox-next{
+        right:5px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<header>
+
+<nav>
+
+<a href="../index.html">Home</a>
+<a href="../about.html">About</a>
+<a href="armaghan.html">Projects</a>
+<a href="../competitions.html">Competitions</a>
+
+<a href="../pdf/Adel-Asadi-Lebenslauf.pdf"
+target="_blank">
+CV
+</a>
+
+<a href="../contact.html">Contact</a>
+
+<span class="language">
+<a href="../de/projects/mahdis.html">DE</a> |
+<a href="mahdis.html" class="active-lang">EN</a>
+</span>
+
+</nav>
+
+</header>
+
+
+<section class="project-header">
+
+<div class="project-number">
+PROJECT 04 · COMPETITION
+</div>
+
+<h1>
+Mahdis Library and Book Exhibition
+</h1>
+
+<div class="project-meta">
+
+<div>
+<strong>Location:</strong> Ahvaz, Iran
+</div>
+
+<div>
+<strong>Area:</strong> 1,700 m²
+</div>
+
+<div>
+<strong>Floors:</strong> 3
+</div>
+
+<div>
+<strong>Year:</strong> 2011
+</div>
+
+</div>
+
+</section>
+
+
+<section class="project-hero">
+
+<img
+src="../images/mahdis-sketch.jpg"
+alt="Mahdis Library and Book Exhibition – architectural sketch">
+
+</section>
+
+
+<section class="project-content">
+
+<h2>
+PROJECT OVERVIEW
+</h2>
+
+<p>
+Mahdis Library and Book Exhibition was developed as part of an architectural competition for a library and book exhibition facility in Ahvaz, Iran, a city characterized by a hot and humid climate.
+</p>
+
+<p>
+The aim was to create a cultural space that would be functional, climatically responsive and inviting. The design process began with a simple rectangular building volume that was divided into three horizontal layers.
+</p>
+
+<p>
+The lowest level was designed as a semi-open exhibition space, allowing natural ventilation and a direct connection to the surrounding outdoor environment. The entrance area was emphasized through a slightly lowered floor level.
+</p>
+
+<p>
+The two upper levels, accommodating the library functions and a small administrative area, were rotated 90 degrees relative to each other. This rotation created overhanging elements that provided shade while enriching the architectural expression of the building.
+</p>
+
+<p>
+Carefully positioned openings were introduced on the upper levels to promote daylight and natural ventilation while also creating vertical spatial connections between the different layers of the building.
+</p>
+
+<p>
+At ground level, the structural columns were transformed into colourful vertical panels that served both structural and architectural purposes. These elements, using primary colours such as yellow, blue and green, helped organize the exhibition areas and strengthened the visual identity of the building.
+</p>
+
+</section>
+
+
+<section class="project-role">
+
+<p>
+<strong>Role:</strong>
+Co-Designer · Concept Development · Volumetric Design · Final Presentation
+</p>
+
+<p>
+<strong>Team:</strong>
+Two-person design team.
+</p>
+
+<p>
+<strong>Responsibilities:</strong>
+I actively participated throughout all stages of the competition project, from the initial design development and volumetric modelling to the final presentation.
+</p>
+
+</section>
+
+
+<section class="project-gallery">
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-sketch.jpg"
+alt="Mahdis Library and Book Exhibition – architectural sketch"
+onclick="openGallery(0)">
+
+<p class="image-caption">
+Architectural Sketch
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-01.jpg"
+alt="Mahdis Library and Book Exhibition – rendering 01"
+onclick="openGallery(1)">
+
+<p class="image-caption">
+Architectural Rendering 01
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-02.jpg"
+alt="Mahdis Library and Book Exhibition – rendering 02"
+onclick="openGallery(2)">
+
+<p class="image-caption">
+Architectural Rendering 02
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-03.jpg"
+alt="Mahdis Library and Book Exhibition – rendering 03"
+onclick="openGallery(3)">
+
+<p class="image-caption">
+Architectural Rendering 03
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-diagram.jpg"
+alt="Mahdis Library and Book Exhibition – design diagram"
+onclick="openGallery(4)">
+
+<p class="image-caption">
+Design Diagram
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-model-01.jpg"
+alt="Mahdis Library and Book Exhibition – physical model 01"
+onclick="openGallery(5)">
+
+<p class="image-caption">
+Physical Model 01
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-model-02.jpg"
+alt="Mahdis Library and Book Exhibition – physical model 02"
+onclick="openGallery(6)">
+
+<p class="image-caption">
+Physical Model 02
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-model-03.jpg"
+alt="Mahdis Library and Book Exhibition – physical model 03"
+onclick="openGallery(7)">
+
+<p class="image-caption">
+Physical Model 03
+</p>
+
+</div>
+
+
+<div class="gallery-item">
+
+<img
+src="../images/mahdis-section.jpg"
+alt="Mahdis Library and Book Exhibition – architectural section"
+onclick="openGallery(8)">
+
+<p class="image-caption">
+Architectural Section
+</p>
+
+</div>
+
+
+</section>
+
+</div>
+
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<span class="lightbox-close"
+onclick="closeGallery()">
+&times;
+</span>
+
+<span class="lightbox-prev"
+onclick="changeImage(-1)">
+&#10094;
+</span>
+
+<img
+class="lightbox-image"
+id="lightboxImage"
+src=""
+alt="Project image">
+
+<span class="lightbox-next"
+onclick="changeImage(1)">
+&#10095;
+</span>
+
+<div class="lightbox-counter"
+id="lightboxCounter">
+1 / 9
+</div>
+
+</div>
+
+
+<section class="project-footer">
+
+<div class="container">
+
+<a href="../index.html">
+← Back to Projects
+</a>
+
+</div>
+
+</section>
+
+
+<script>
+
+const galleryImages = [
+
+    "../images/mahdis-sketch.jpg",
+    "../images/mahdis-01.jpg",
+    "../images/mahdis-02.jpg",
+    "../images/mahdis-03.jpg",
+    "../images/mahdis-diagram.jpg",
+    "../images/mahdis-model-01.jpg",
+    "../images/mahdis-model-02.jpg",
+    "../images/mahdis-model-03.jpg",
+    "../images/mahdis-section.jpg"
+
+];
+
+let currentImage = 0;
+
+
+function openGallery(index){
+
+    currentImage = index;
+
+    document.getElementById("lightbox").style.display = "flex";
+
+    showImage();
+
+    document.body.style.overflow = "hidden";
+
+}
+
+
+function closeGallery(){
+
+    document.getElementById("lightbox").style.display = "none";
+
+    document.body.style.overflow = "auto";
+
+}
+
+
+function changeImage(direction){
+
+    currentImage += direction;
+
+    if(currentImage < 0){
+
+        currentImage = galleryImages.length - 1;
+
+    }
+
+    if(currentImage >= galleryImages.length){
+
+        currentImage = 0;
+
+    }
+
+    showImage();
+
+}
+
+
+function showImage(){
+
+    document.getElementById("lightboxImage").src =
+        galleryImages[currentImage];
+
+    document.getElementById("lightboxCounter").textContent =
+        (currentImage + 1) + " / " + galleryImages.length;
+
+}
+
+
+document.addEventListener("keydown", function(event){
+
+    if(document.getElementById("lightbox").style.display === "flex"){
+
+        if(event.key === "ArrowLeft"){
+
+            changeImage(-1);
+
+        }
+
+        if(event.key === "ArrowRight"){
+
+            changeImage(1);
+
+        }
+
+        if(event.key === "Escape"){
+
+            closeGallery();
+
+        }
+
+    }
+
+});
+
+</script>
+
+</body>
+</html>
